@@ -1,0 +1,176 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #0b0b0b;
+    color: #f5f5f5;
+    min-height: 100vh;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* CABEÇALHO E CONTEÚDO */
+header {
+    width: 100%;
+    max-width: 1000px;
+    background: linear-gradient(145deg, #171717, #101010);
+    border: 1px solid #292929;
+    border-left: 5px solid #f5c400;
+    border-radius: 12px;
+    padding: 35px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.5);
+    animation: aparecer 0.8s ease;
+}
+
+/* TÍTULO */
+h1 {
+    color: #f5c400;
+    font-size: clamp(28px, 5vw, 42px);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+h1::after {
+    content: "";
+    display: block;
+    width: 90px;
+    height: 4px;
+    background: #f5c400;
+    margin: 15px auto 0;
+    border-radius: 5px;
+}
+
+/* INFORMAÇÕES DA MECÂNICA */
+.mecanicaaven {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.mecanicaaven p {
+    color: #c9c9c9;
+    font-size: 16px;
+    line-height: 1.8;
+    background: #1c1c1c;
+    padding: 18px 20px;
+    border-radius: 8px;
+    border: 1px solid #2c2c2c;
+    transition: 0.3s ease;
+}
+
+.mecanicaaven p:first-child {
+    background: #24200d;
+    border-left: 3px solid #f5c400;
+    color: #fff;
+}
+
+.mecanicaaven p:hover {
+    transform: translateX(5px);
+    border-color: #f5c400;
+    background: #242424;
+}
+
+.mecanicaaven strong {
+    color: #f5c400;
+}
+
+/* IMAGEM DA LAMBORGHINI */
+body > img {
+    display: block;
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+    max-height: 520px;
+    object-fit: cover;
+    margin-top: 30px;
+    border-radius: 12px;
+    border: 1px solid #333;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+body > img:hover {
+    transform: scale(1.015);
+    box-shadow: 0 15px 45px rgba(245, 196, 0, 0.15);
+}
+
+/* RODAPÉ */
+footer {
+    width: 100%;
+    max-width: 1000px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+footer a {
+    display: inline-block;
+    text-decoration: none;
+    color: #111;
+    background: #f5c400;
+    padding: 13px 35px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.3s ease;
+}
+
+footer a:hover {
+    background: #fff;
+    color: #000;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(245, 196, 0, 0.25);
+}
+
+/* ANIMAÇÃO */
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 600px) {
+    body {
+        padding: 20px 12px;
+    }
+
+    header {
+        padding: 22px 16px;
+    }
+
+    h1 {
+        letter-spacing: 1px;
+        margin-bottom: 20px;
+    }
+
+    .mecanicaaven p {
+        font-size: 14px;
+        padding: 14px;
+        line-height: 1.7;
+    }
+
+    body > img {
+        margin-top: 20px;
+        border-radius: 8px;
+    }
+
+    footer a {
+        width: 100%;
+        max-width: 250px;
+    }

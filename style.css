@@ -1,0 +1,297 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+html {
+   scroll-behavior: smooth;
+}
+
+body {
+   min-height: 100vh;
+   font-family: Arial, Helvetica, sans-serif;
+   background-color: #0a0a0a;
+   color: white;
+}
+
+.titulo {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   min-height: 80px;
+   font-size: 42px;
+   text-transform: uppercase;
+   letter-spacing: 3px;
+}
+
+.sub {
+   display: flex;
+   justify-content: center;
+   text-align: center;
+   color: #d6a329;
+   font-size: 20px;
+   margin-bottom: 30px;
+}
+
+.capa {
+   min-height: 100vh;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+
+   background-image:
+       linear-gradient(
+           rgba(0, 0, 0, 0.45),
+           rgba(0, 0, 0, 0.75)
+       ),
+       url("img/lamborghini-aventador-s-2016.jpg");
+
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center;
+
+   padding: 40px 20px;
+}
+
+.capa h2 {
+   color: #d6a329;
+   font-size: 50px;
+   text-transform: uppercase;
+   letter-spacing: 4px;
+   text-shadow: 0 3px 15px black;
+}
+
+.menu {
+   position: sticky;
+   top: 0;
+   z-index: 1000;
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   gap: 40px;
+   padding: 18px 40px;
+
+   background-color: rgba(0, 0, 0, 0.95);
+   border-bottom: 1px solid #d6a329;
+
+   backdrop-filter: blur(8px);
+}
+
+.menu a {
+   position: relative;
+   color: white;
+   text-decoration: none;
+   font-size: 16px;
+   font-weight: bold;
+   text-transform: uppercase;
+   transition: color 0.3s ease;
+}
+
+.menu a::after {
+   content: "";
+   position: absolute;
+   left: 0;
+   bottom: -7px;
+   width: 0;
+   height: 2px;
+   background-color: #d6a329;
+   transition: width 0.3s ease;
+}
+
+.menu a:hover {
+   color: #d6a329;
+}
+
+.menu a:hover::after {
+   width: 100%;
+}
+
+.logo {
+   width: 100px;
+   height: auto;
+   margin-left: 20px;
+}
+
+.resumo {
+   width: 100%;
+   min-height: 100vh;
+   padding: 100px 8%;
+
+   background:
+       linear-gradient(
+           180deg,
+           #111111,
+           #080808
+       );
+}
+
+.resumo > h2 {
+   text-align: center;
+   color: #d6a329;
+   font-family: Georgia, serif;
+   font-size: 42px;
+   margin-bottom: 60px;
+   text-transform: uppercase;
+   letter-spacing: 2px;
+}
+
+.conteudo-resumo {
+   max-width: 1200px;
+   width: 100%;
+   margin: auto;
+
+   display: flex;
+   align-items: center;
+   gap: 70px;
+}
+
+.texto-resumo {
+   flex: 1;
+   color: #eeeeee;
+   font-size: 18px;
+   line-height: 1.8;
+   text-align: justify;
+
+   background: rgba(0, 0, 0, 0.65);
+
+   padding: 35px;
+
+   border-left: 3px solid #d6a329;
+   border-radius: 5px;
+
+   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.texto-resumo h2 {
+   color: #d6a329;
+   font-family: Georgia, serif;
+   font-size: 35px;
+   margin-bottom: 25px;
+}
+
+.texto-resumo p {
+   font-size: 18px;
+   line-height: 1.8;
+   margin-bottom: 20px;
+}
+
+.imagemresumo {
+   flex: 1;
+   display: flex;
+   justify-content: center;
+}
+
+.imagemresumo img {
+   width: 100%;
+   max-width: 550px;
+   display: block;
+
+   border-radius: 8px;
+   border: 1px solid #d6a329;
+
+   box-shadow:
+       0 15px 40px rgba(0, 0, 0, 0.7),
+       0 0 20px rgba(214, 163, 41, 0.15);
+
+   transition:
+       transform 0.4s ease,
+       box-shadow 0.4s ease;
+}
+
+.imagemresumo img:hover {
+   transform: scale(1.03);
+
+   box-shadow:
+       0 20px 50px rgba(0, 0, 0, 0.8),
+       0 0 30px rgba(214, 163, 41, 0.3);
+}
+
+@media (max-width: 900px) {
+
+   .menu {
+       gap: 20px;
+       padding: 15px 20px;
+   }
+
+   .menu a {
+       font-size: 14px;
+   }
+
+   .conteudo-resumo {
+       flex-direction: column;
+       gap: 40px;
+   }
+
+   .texto-resumo {
+       width: 100%;
+   }
+
+   .imagemresumo {
+       width: 100%;
+   }
+
+   .imagemresumo img {
+       max-width: 700px;
+   }
+
+   .capa h2 {
+       font-size: 38px;
+   }
+}
+
+@media (max-width: 600px) {
+
+   .menu {
+       flex-wrap: wrap;
+       gap: 15px;
+   }
+
+   .logo {
+       width: 80px;
+       margin-left: 0;
+   }
+
+   .titulo {
+       font-size: 30px;
+   }
+
+   .sub {
+       font-size: 16px;
+   }
+
+   .capa {
+       min-height: 80vh;
+   }
+
+   .capa h2 {
+       font-size: 30px;
+       letter-spacing: 2px;
+   }
+
+   .resumo {
+       padding: 70px 20px;
+   }
+
+   .resumo > h2 {
+       font-size: 30px;
+       margin-bottom: 40px;
+   }
+
+   .texto-resumo {
+       padding: 25px;
+       font-size: 16px;
+   }
+
+   .texto-resumo h2 {
+       font-size: 28px;
+   }
+
+   .texto-resumo p {
+       font-size: 16px;
+   }

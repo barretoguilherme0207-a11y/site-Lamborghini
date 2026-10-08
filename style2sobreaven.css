@@ -1,0 +1,115 @@
+body {
+    background: linear-gradient(135deg, #fff700, #ffd500);
+    color: #222;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
+    margin: 0;
+}
+
+
+/* CABEÇALHO */
+
+header {
+    background-color: #222;
+    color: white;
+    padding: 25px 20px;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 25px;
+}
+
+
+/* SOBRE A AVE */
+
+.sobreave {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 25px;
+    background-color: rgba(255, 255, 255, 0.95);
+    color: #222;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: left;
+}
+
+.sobreave p {
+    margin-bottom: 15px;
+}
+
+.sobreave strong {
+    color: #d97700;
+}
+
+
+/* IMAGEM */
+
+img {
+    display: block;
+    max-width: 90%;
+    width: 700px;
+    height: auto;
+    margin: 30px auto;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+
+/* RODAPÉ */
+
+footer {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #222;
+    text-align: center;
+}
+
+
+/* BOTÃO VOLTAR */
+
+footer a {
+    display: inline-block;
+    background-color: #fff700;
+    color: #222;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+footer a:hover {
+    background-color: #ff8c00;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+}
+
+
+/* CELULAR */
+
+@media (max-width: 600px) {
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .sobreave {
+        margin: 0 10px;
+        padding: 18px;
+        text-align: left;
+    }
+
+    img {
+        max-width: 90%;
+    }
+
+    footer a {
+        font-size: 13px;
+        padding: 9px 16px;
+    }

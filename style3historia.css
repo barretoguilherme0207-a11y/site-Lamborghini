@@ -1,0 +1,118 @@
+
+body {
+    background: linear-gradient(135deg, #fff700, #ffd500);
+    color: #222;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+
+/* CABEÇALHO */
+
+header {
+    background-color: #222;
+    color: white;
+    padding: 25px 20px;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+
+/* HISTÓRIA */
+
+.historiaave {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 25px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: justify;
+}
+
+.historiaave p {
+    margin-bottom: 15px;
+}
+
+
+/* IMAGENS */
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+
+/* BOTÃO VOLTAR */
+
+.voltar {
+    display: inline-block;
+    background-color: #222;
+    color: white;
+    padding: 10px 20px;
+    margin: 20px;
+    text-decoration: none;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.voltar:hover {
+    background-color: #ff8c00;
+    color: #222;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+}
+
+
+/* RODAPÉ */
+
+footer {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #222;
+    text-align: center;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+footer a:hover {
+    color: #ff8c00;
+}
+
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .historiaave {
+        margin: 20px 10px;
+        padding: 18px;
+        text-align: left;
+    }
+
+    .voltar {
+        font-size: 13px;
+        padding: 9px 16px;
+    }
